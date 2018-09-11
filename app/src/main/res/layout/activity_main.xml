@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/relativeLayout"
+    android:background="@color/backgroundColor"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingEnd="5dp"
+            android:background="#04B3B6"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Feedback"
+                android:textSize="32sp"
+                android:id="@+id/tvFestember"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/hammersmith"
+                android:textColor="#ffffff"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+            <Button
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_export"
+                android:id="@+id/btnExport"
+                android:onClick="exportButton"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffffff"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:paddingTop="10dp">
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:gravity="center"
+                android:paddingRight="10dp"
+                android:background="@color/backgroundColor"
+                android:backgroundTint="@color/backgroundColor"
+                android:spinnerMode="dropdown"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:elevation="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/quest_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1/10"
+                android:visibility="gone" />
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar"
+                android:visibility="gone"/>
+
+            <!--android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/recyclerView"
+            android:paddingBottom="70dp"
+            android:clipToPadding="false"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView-->
+
+            <com.yarolegovich.discretescrollview.DiscreteScrollView
+                android:id="@+id/discreteScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:layout_marginTop="-50dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:background="@color/backgroundColor"
+        android:id="@+id/btnLayout"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <!--Button
+            android:visibility="gone"
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="previous"
+            android:text="Previous" /-->
+
+        <!--Button
+            android:visibility="gone"
+            android:id="@+id/btnPrevious"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="next"
+            android:text="Next" /-->
+
+        <Button
+            android:layout_width="wrap_content"
+            android:text="SUBMIT"
+            android:id="@+id/submit"
+            android:onClick="submitListener"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_shape"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hammersmith" />
+
+    </LinearLayout>
+
+</RelativeLayout>
